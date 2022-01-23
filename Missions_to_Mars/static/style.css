@@ -1,0 +1,36 @@
+/* Main Tags */
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #FAF9F6;
+    color: #808080;
+}
+h1, 
+h3 {
+    color: #c64c18;
+}
+h4 {
+    color: #80808088;
+}
+.table-custom {
+    position: relative;
+    height: 200px;
+    overflow-x: auto;
+    display: block;
+ }
+
+/* Navbar */
+.navbar-custom {
+    background-color: #181818;
+}
+.navbar-custom .navbar-brand {
+    color: #c64c18;
+}
+
+/* Column */
+.col-custom {
+    background-color: white;
+    border-radius: 10px;
+}
+.col-custom .img-fluid {
+    max-width: 100%;
+}
