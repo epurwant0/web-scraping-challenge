@@ -12,7 +12,7 @@ app = Flask(__name__)
 # Functions
 def init_browser():
    executable_path = {'executable_path': ChromeDriverManager().install()}
-   browser = Browser('chrome', **executable_path, headless=False)
+   browser = Browser('chrome', **executable_path, headless=True)
    return browser
 
 def scrape():

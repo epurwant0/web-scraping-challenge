@@ -20,6 +20,14 @@ logo = os.path.join(app.config['UPLOAD_FOLDER'], 'assets', 'MarsLogo.png')
 @app.route('/')
 def index():
     marsData = mars.find_one()
+    if (bool(marsData) == False):
+        data = scrape_mars.scrape()
+        mars.replace_one(
+            {},
+            data,
+            upsert = True
+        )
+        marsData = mars.find_one()
     return render_template('index.html', logo = logo, marsData = marsData)
 
 @app.route('/scrape')
